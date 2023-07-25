@@ -1,8 +1,7 @@
 .App {
   font-family: sans-serif;
+  text-align: center;
   background-color: aqua;
-  text-align: center; 
-  
 }
 
 /* @keyframes App-logo-spin {

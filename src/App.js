@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Component1 from './Component1';
+import Component2 from './Component2';
 
 const App = () => {
-  const [show, setShow] = useState(true);
-  const [hide, sethide] = useState(false);
+  const [showComponent1, setShowComponent1] = useState(true);
+  
+
+  const handleToggle = () => {
+    setShowComponent1((prevState) => !prevState);
+    
+  };
 
   return (
-    <>
-      {show ? <h1>Welcome to CodeSandBox</h1> : null}
-      {hide ? <h1>Welcome to Box</h1> : null}
-      <button onClick={() => setShow(!show)}>show</button>
-      <button onClick={() => sethide(!hide )}>hide</button>
-    </>
+    <div>
+      {showComponent1 ? <Component1 /> : <Component2 />}
+      
+      <button onClick={handleToggle}>Toggle Components</button>
+    </div>
   );
 };
 
 export default App;
+
