@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
-import Component1 from './Component1';
-import Component2 from './Component2';
+import React from 'react';
+import Hideshow from './task1/component/hideshow';
+import Dynmicdata from './tasks2/dynmicdata';
+import DynamicList from './task3/dynmiclist';
 
-const App = () => {
-  const [showComponent1, setShowComponent1] = useState(true);
-  
-
-  const handleToggle = () => {
-    setShowComponent1((prevState) => !prevState);
-    
-  };
-
+function App() {
   return (
-    <div>
-      {showComponent1 ? <Component1 /> : <Component2 />}
-      
-      <button onClick={handleToggle}>Toggle Components</button>
-    </div>
+  <div className="App">
+
+    <Hideshow/>
+    <Dynmicdata/>
+    <DynamicList/>
+  </div>
   );
-};
+}
+
 
 export default App;
 
